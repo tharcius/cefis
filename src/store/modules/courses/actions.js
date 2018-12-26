@@ -6,7 +6,6 @@ export default {
   loadCourses (context) {
     axios.get(`${URL_BASE}${RESOURCE}`)
       .then(response => {
-        console.log('Teste')
         context.commit('COURSES_LOAD', response.data)
       })
       .catch(error => {

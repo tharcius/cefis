@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="container-fluid">
     <router-view/>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
   created: function () {
     this.loadNotifications()
     this.$forceUpdate()
-    // console.clear()
+    console.clear()
   }
 }
 </script>
@@ -27,6 +27,6 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    padding: 0 3%;
   }
 </style>
