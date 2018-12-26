@@ -1,11 +1,12 @@
 import axios from 'axios'
 import { URL_BASE } from '../../config/index'
-const RESOURCE = 'course'
+const RESOURCE = 'event'
 
 export default {
-  loadNotifications (context) {
+  loadCourses (context) {
     axios.get(`${URL_BASE}${RESOURCE}`)
       .then(response => {
+        console.log('Teste')
         context.commit('COURSES_LOAD', response.data)
       })
       .catch(error => {
