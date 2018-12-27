@@ -8,12 +8,12 @@
 export default {
   name: 'App',
   methods: {
-    loadNotifications () {
+    loadCourses () {
       this.$store.dispatch('loadCourses')
     }
   },
   created: function () {
-    this.loadNotifications()
+    this.loadCourses()
     this.$forceUpdate()
     console.clear()
   }
@@ -25,7 +25,6 @@ export default {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #2c3e50;
     padding: 0 3%;
   }

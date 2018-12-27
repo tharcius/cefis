@@ -1,14 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import IndexComponent from '@/components/Main/IndexComponent'
+import IndexMain from '@/components/Main/IndexMain'
+import IndexCourse from '@/components/Course/IndexCourse'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   routes: [
-    {
-      path: '/', name: 'Index', component: IndexComponent
-    }
+    {path: '/', name: 'Index', component: IndexMain},
+    {path: '/curso/:id', name: 'Course', component: IndexCourse},
+    {path: '*', component: IndexMain}
+
   ]
 })
